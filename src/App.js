@@ -7,6 +7,8 @@ import axios from "axios";
 import Loader from "./Components/Layouts/Loader";
 import Error from "./Components/Layouts/Error";
 
+require("dotenv").config();
+
 class App extends Component {
   state = {
     value: "",

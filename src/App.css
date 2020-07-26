@@ -62,7 +62,9 @@ input.searchbar {
   color: #00000069;
   font-weight: bold;
 }
-
+input:focus {
+  outline: none;
+}
 .city-card {
   width: 100%;
   border-radius: 41px;
