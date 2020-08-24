@@ -33,7 +33,7 @@ class App extends Component {
     if (process.env.NODE_ENV !== "production") {
       OWMKEY = process.env.REACT_APP_WEATHER_API_KEY;
     } else {
-      OWMKEY = '086cf558e7fabc328794bc2aaaedf915';
+      OWMKEY = 086cf558e7fabc328794bc2aaaedf915;
     }
 
     console.log(OWMKEY);
