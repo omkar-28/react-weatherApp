@@ -37,8 +37,8 @@ class App extends Component {
     }
 
     console.log(OWMKEY);
-    const weather = `https://api.openweathermap.org/data/2.5/weather?q=${value}&APPID=${OWMKEY}&units=metric`;
-    const forecast = `https://api.openweathermap.org/data/2.5/forecast?q=${value}&APPID=${OWMKEY}&units=metric`;
+    const weather = `https://api.openweathermap.org/data/2.5/weather?q=${value}&APPID=086cf558e7fabc328794bc2aaaedf915&units=metric`;
+    const forecast = `https://api.openweathermap.org/data/2.5/forecast?q=${value}&APPID=086cf558e7fabc328794bc2aaaedf915&units=metric`;
 
     try {
       const { data } = await axios.get(weather);
