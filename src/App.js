@@ -35,7 +35,7 @@ class App extends Component {
     } else {
       OWMKEY = process.env.WEATHER_API_KEY;
     }
-
+    console.log(process.env.WEATHER_API_KEY);
     const weather = `https://api.openweathermap.org/data/2.5/weather?q=${value}&APPID=${OWMKEY}&units=metric`;
     const forecast = `https://api.openweathermap.org/data/2.5/forecast?q=${value}&APPID=${OWMKEY}&units=metric`;
 
