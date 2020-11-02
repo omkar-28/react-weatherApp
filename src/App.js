@@ -9,13 +9,6 @@ import Error from "./Components/Layouts/Error";
 
 require("dotenv").config();
 
-let OWMKEY;
-if (process.env.NODE_ENV !== "production") {
-  OWMKEY = process.env.REACT_APP_WEATHER_API_KEY;
-} else {
-  OWMKEY = process.env.WEATHER_API_KEY;
-}
-
 class App extends Component {
   state = {
     value: "",
@@ -30,17 +23,13 @@ class App extends Component {
       value: e.target.value,
     });
   };
-
-  
   
   SearchCity = async (e) => {
     e.preventDefault();
     const { value } = this.state;
     this.setState({ fetching: true, weatherInfo: null, error: false });
-
-    console.log(OWMKEY);
-    const weather = `https://api.openweathermap.org/data/2.5/weather?q=${value}&APPID=${OWMKEY}&units=metric`;
-    const forecast = `https://api.openweathermap.org/data/2.5/forecast?q=${value}&APPID=${OWMKEY}&units=metric`;
+    const weather = `https://api.openweathermap.org/data/2.5/weather?q=${value}&APPID=086cf558e7fabc328794bc2aaaedf915&units=metric`;
+    const forecast = `https://api.openweathermap.org/data/2.5/forecast?q=${value}&APPID=086cf558e7fabc328794bc2aaaedf915&units=metric`;
 
     try {
       const { data } = await axios.get(weather);
@@ -58,7 +47,7 @@ class App extends Component {
         "August",
         "September",
         "October",
-        "Nocvember",
+        "November",
         "December",
       ];
       const days = [
